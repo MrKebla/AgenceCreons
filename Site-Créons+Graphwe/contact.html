@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Contact &mdash; Agence Cr&eacute;ons </title>
+        <script src="https://kit.fontawesome.com/56e3538f94.js" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--Les animations de scroll-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> <!--Les deux polices-->
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+        <link rel="icon" href="img/Icone.png" type="image/png" /> <!--Mettre image onglet-->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="accueil-contact">
+            <div class="overlay2">
+                <div class="logo">
+                    <a href="index.html"><img src="img/Logo_Creons.png" width="500" alt="logo de creons"></a>
+                </div>
+                <ul class="menu2">
+                    <li><a href="index.html" class="menu-lien"> Accueil </a></li>
+                    <li><a href="agence.html" class="menu-lien"> Agence </a></li>
+                    <li><a href="projet.html" class="menu-lien"> Projet </a></li>
+                    <li><a href="#contact" class="menu-lien" id="active"> Contact </a></li>
+                </ul>
+                <div class="toggle">
+                    <i class="fas fa-bars ouvrir"></i>
+                    <i class="fas fa-times fermer"></i>
+                </div>
+                <div class="accueil-text">
+                    <div class="accueil-text-haut">
+                        <h1> Nous contacter </h1>
+                    </div>
+                </div>
+            </div>
+        </header> 
+        <section class="pcontact">
+            <div class="container-contact">
+                <div class="contact-titre">
+                    <h2> Des interrogations ? </h2>
+                    <div class="barre"></div>
+                </div>
+                <div class="contact-inform">
+                    <div class="contact-inform-block">
+                        <h2> Informations </h2> 
+                        <p> Nous pouvons s&ucirc;rement r&eacute;pondre &agrave; vos
+                            questions et vous aider &agrave; r&eacute;soudre vos probl&egrave;mes. </p> 
+                        <h3> Mail </h3>            
+                        <a href="mailto:creonsmmi93@gmail.com">
+                            <p> creonsmmi93@gmail.com </p>
+                        </a>
+                    </div>
+                    <div class="contact-inform-block">
+                        <div class="bord-form">
+                            <form class="contact-form" action="https://formsubmit.co/creonsmmi93@gmail.com" method="POST" target="_blank">
+                                <label for="fname"> Nom &amp; pr&eacute;nom : </label>
+                                <input type="text" name="name" placeholder="Nom Prénom" required class="input">
+                                <label for="emailAddress"> Email : </label>
+                                <input type="email" name="email" placeholder="Adressemail@mail.com" required class="input">
+                                <label for="sujet"> Objet : </label>
+                                <input type="text" name="subject" placeholder="Objet" required class="input">
+                                <label for="subject"> Message : </label>
+                                <textarea name="message" placeholder="Votre message" required></textarea>
+                                <input type="submit" name="submit" class="btn">
+                            </form>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </section>  
+        <footer>
+            <div class="lien" >
+                <div class="social">
+                    <a href="https://www.instagram.com/creonsmmi/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/Creons93" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://vm.tiktok.com/ZM8po5dGg/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/in/agence-cr%C3%A9ons-51088a226/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <ul>
+                    <li><a href="index.html"> Accueil </a></li>
+                    <li><a href="agence.html"> Agence </a></li>
+                    <li><a href="projet.html"> Projet </a></li>
+                    <li><a href="#contact"> Contact </a></li>
+                </ul>
+            </div>
+            <ul class="copy"> 
+                <li> Agence Cr&eacute;ons &copy; 2022  </li> 
+                <li><a href="mentions-legales.html"> Mentions L&eacute;gales </a></li>
+            </ul>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" 
+        integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- Pour les animations d&#039;ouverture de page -->
+        <script src="js/app.js"></script>
+    </body>
+</html>
