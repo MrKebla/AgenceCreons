@@ -1,0 +1,1723 @@
+    /********** Tu connais **********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    scroll-behavior: smooth;    /********** Pour un scroll smooth **********/
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem 0;
+}
+
+   /********  Modification du scoll *********/
+
+body::-webkit-scrollbar {
+    width: 12.5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #d9f7a3;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #343133; 
+    border-radius: 9px;
+    border: 1px solid #d9f7a3  
+}
+
+    /********** Accueil page index **********/
+
+.accueil {
+    background-image: url('../img/Accueil.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+
+.accueil .toggle, 
+.accueil-agence .toggle, 
+.accueil-projet .toggle, 
+.accueil-contact .toggle, 
+.accueil-mentions .toggle {
+    display: none;
+}
+
+.accueil-agence, 
+.accueil-projet, 
+.accueil-contact  {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+    background-position: center;
+}
+
+        /********** Tout ce qui est dans la partie vert du header  **********/
+
+.overlay {
+    background-image: url('../img/Accueil_overlay.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay2 {
+    background-image: url('../img/Pages_overlay.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+            /**********  Pour le logo  **********/
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.logo img {
+    max-width: 120px;
+    transition: .3s;
+}
+
+.logo img:hover {
+    max-width: 125px;
+}
+
+            /**********  Menu navigation du header de l'index  **********/
+
+.menu, 
+.menu2 {
+    position: absolute;
+    top: 2.75rem;
+    left: 45%;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+    width: 540px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-lien {
+    display: flex;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #343133;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.15s;
+}
+
+.menu-lien:hover {
+    transform: scale(1.008);
+    color: black;
+    animation: link 0.75s infinite ;
+}
+
+#active {
+    padding: 0.125rem;
+    border-bottom: solid;
+    border-radius: 5px;
+    color: black;
+}
+
+        /**********  Menu navigation du header des autres pages **********/
+
+.menu2 {
+    width: 640px;
+}
+
+.menu2 li a {
+    font-size: 24px;
+}
+
+            /**********  Le texte de l'accueil  **********/
+
+.accueil-text {
+    width: 80%;
+    color: #343133;
+}
+
+.accueil-text-haut h1 {
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 6.5rem;
+    text-shadow: 0.02em 0.01em 0.0125em rgb(219, 219, 219) ;
+    font-family: 'Showcard Gothic', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.accueil-text-bas p {
+    font-weight: 300; 
+    text-transform: uppercase;  /********** Mettre en maj **********/
+    letter-spacing: 2px;
+    position: relative;
+    animation: bounce 1s infinite ;
+    z-index: -1;
+}
+
+.accueil-text-bas a {
+    text-decoration: none;
+    color: #343133;
+}
+
+h1, 
+h2, 
+h3 {
+    font-family: 'Showcard Gothic', sans-serif;
+    color: #343133;
+}
+
+    /**********  A Propos  **********/
+
+.apropos {
+    padding: 3rem 0 3rem;
+    color: #343133;
+}
+
+        /**********  Partie de l'entete  **********/
+
+.entete {
+    display: flex;
+}
+
+.entete-slogan {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.entete-titre {
+    width: 70%;
+}
+
+.entete-titre h2 {
+    font-family: 'Showcard Gothic', sans-serif;
+    font-size: 2.5rem;
+}
+
+.entete-titre .barre {
+    width: 120px;
+    height: 5px;
+    background: #343133;
+    margin: 1rem 0 1.5rem;
+}
+
+.entete-titre p {
+    line-height: 1.4rem;
+}
+
+        /**********  Partie du corps (agence et projet ) **********/
+
+.apropos-corps {
+    display: flex;
+    flex-direction: column;
+}
+
+.apropos-corps h3 {
+    font-family: 'Showcard Gothic', sans-serif;
+    font-size: 1.75rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.apropos-corps-agence, 
+.apropos-corps-projet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text {
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 0;
+}
+
+.apropos-corps-agence .text {
+    padding-left: 4rem;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.apropos-corps-projet .text {
+    padding-right: 4rem;
+}
+
+.image {
+    display:flex;
+    width: 50%;
+    padding: 3rem;
+}
+
+.apropos-corps-projet .image {
+    padding-right: 0;
+}
+
+.picture {
+    width: 90%;
+    transition: 0.3s;
+}
+
+.picture:hover {
+    transform: scale(1.05);
+}
+
+    /**********  Contact  **********/
+
+.contact {
+    padding: 2.5rem 0;
+    color: #343133;
+    background-color: #cacaca;
+}
+
+.contact h1 {
+    font-family: 'Showcard Gothic', sans-serif;
+    margin: 0.5rem 0;
+}
+
+.contact .entete-titre {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn {
+    color: #343133;
+    border-width: 1px;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background: rgb(250, 250, 250);
+    border-radius: 7px;
+    transition: 0.3s;
+    border: solid 1px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background: #2f3542; 
+    color: rgb(230, 230, 230);
+}
+
+    /********* Flux Instagram *********/
+
+.insta {
+    background-color: #dadada;
+    padding: 2rem 0;
+}
+
+.publi {
+    display: flex;
+    flex-direction: row;
+}
+
+.publi-corps {
+    width: 24%;
+}
+
+    /********** Newsletter **********/
+
+.newsletter {
+    padding: 1.5rem 0;
+    text-align: center;
+    background-color: rgb(141, 141, 141);
+}
+
+#news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter h1 {
+    color: rgb(31, 31, 31);
+    font-family: 'Showcard Gothic', sans-serif;
+}
+
+.newsletter p {
+    padding: 1.25rem 0;
+    color: rgb(15, 15, 15);
+}
+
+.newsletter .email {
+    height: 40px;
+    display: flex;
+}
+
+.newsletter .email i {
+    background: #2f3542;
+    width: 40px;
+    line-height: 40px;
+    color: rgb(230, 230, 230);
+}
+
+.box, 
+.nbtn {
+    border: none;
+    outline: none;
+}
+
+.nbtn {
+    background: #2f3542; 
+    color: rgb(230, 230, 230);
+    padding: 0 10px ;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.nbtn:hover {
+    background: #21252c; 
+}
+
+.box {
+    width: 0px;
+    transition: 0.6s;
+}
+
+.email:hover > .box,
+.box:focus {
+    width: 260px;
+    padding: 0 10px;
+}
+
+    /**********  Footer  **********/
+
+        /**********  Partie des reseaux  **********/
+
+footer {
+    bottom:0;
+}
+
+.lien {
+    background-color: rgb(43, 43, 43); 
+    padding: 1.5rem 0;
+}
+
+.lien .social {
+   color: rgb(196, 196, 196);
+   text-align: center;
+   padding: 0 0 1.25rem;
+}
+
+.lien .social a {
+    font-size: 24px;
+    color: inherit ;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 35%;
+    margin: 0 0px;
+}
+
+.lien .social a:hover {
+    color: white ;
+}
+
+        /********** Partie de la navigation  **********/
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+footer ul li a {
+    color: inherit;
+    text-decoration: none;
+    color: rgb(196, 196, 196);
+    transition: 0.3s;
+}
+
+footer ul li a:hover {
+    color: white;
+}
+
+.copy {
+    background-color: rgb(24, 24, 24); 
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+    /**********  Page Agence  **********/
+
+        /**********  Header  **********/
+
+.accueil-agence {
+    background-image: url('../img/Agence.jpg');
+}
+
+.accueil-agence .accueil-text .accueil-text-haut h1 {
+    font-size: 5rem;
+}
+
+.container-agence {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+        /**********  Partie "qui sommes-nous ?" **********/
+
+.agence {
+    padding: 1rem 0 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+}
+
+.agence-titre {
+    width: 100%;
+}
+
+.agence-titre h2 {
+    font-family: 'Showcard Gothic', sans-serif;
+    font-size: 2rem;
+    color: #343133;
+    margin: 1rem 0.75rem;
+}
+
+.agence-titre .barre {
+    width: 45%;
+    height: 4px;
+    background: #343133;
+    margin: 1rem auto 1.5rem;
+    justify-content: center; 
+}
+
+.agence-titre p {
+    line-height: 1.4rem;
+    margin: 1.75rem 1rem;
+}
+
+        /**********  Partie Valeurs  **********/
+
+.valeur {
+    padding: 1rem 0 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+}
+
+.valeur .agence-titre .barre {
+    width: 40%;
+    height: 4px;
+    background: #343133;
+    margin: 1rem auto 1.5rem;
+}
+
+        /**********  Partie équipe  **********/
+
+.ekip {
+    padding: 1rem 0 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+}
+
+.ekip .agence-titre .ekip-barre {
+    width: 40%;
+    height: 3px;
+    background: #343133;
+    margin: 1.5rem auto 2rem;
+}
+
+.ekip h3 {
+    font-size: 1.10rem;
+    margin: 0.5rem 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: black;
+}
+
+.poles {
+    display: flex;
+    flex-direction: row;
+}
+
+.pole,
+.pole2,
+.pole3 {
+    display: flex;
+    cursor: pointer;
+    margin: auto;
+    border-radius: 10px;
+    transition: .15s;
+}
+
+.perso {
+    margin: 1rem;
+    text-align: center;
+}
+
+.pole:hover,
+.pole2:hover, 
+.pole3:hover {
+    background-color: rgb(224, 224, 224);
+    box-shadow: 8px 8px 12px #aaa;
+    background-size: 150%;
+}
+
+            /********** Paramètres du Popup **********/
+
+.popup {
+    display: none; 
+    position: fixed;    /********** Rester dans la place  **********/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 2px solid #666;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);   /**********  Opacité noir **********/  
+}
+
+                /********* Partie contenu du popup ********/  
+
+.popupDesc {
+    background-color: #faffea;
+    margin: 10vh auto;  /********** 15% d'en haut et centré  **********/
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+
+.popupDesc-corps {
+    width: 100%;
+    height: 100% ;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+.popupDesc-corps img {
+    width: 32%;
+}
+
+.popupDesc-corps h3 {
+    font-family: 'Showcard Gothic', sans-serif;
+    font-size: 1.25rem;
+    margin: 0.5rem;
+}
+
+.popupDesc-corps p {
+    margin: 2rem;
+    padding: 0rem 1rem;
+    line-height: 1.4rem;
+    font-family: 'Barlow Condensed', sans-serif;  
+}
+
+                /********** Différentes tailles d'images *********/
+
+.popup .popupDesc .popupDesc-corps .mohamed img {
+    width: 75%;
+}
+
+.popup .popupDesc .popupDesc-corps .design img {
+    width: 18%;
+}
+
+        /**********  Partie autres agences  **********/
+
+.agences {
+    padding: 1rem 0 1rem;
+    justify-content: center; 
+    margin: 0 0.5rem;
+}
+
+.agences h2, h3 {
+    color: #343133;
+}
+
+.agences-corps {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.agences .barre {
+    width: 150px;
+    height: 5px;
+    background: #343133;
+    margin: 1rem 0 1.5rem;
+}
+
+.agences-corps-block {
+    width: 20%;
+    transition: .3s;
+    text-align: center;
+}
+
+.agences-corps-block:hover {
+    transform: scale(1.05);
+}
+
+.agences-corps-block img {
+    width: 60%;
+}
+
+.agences-corps-block h3 {
+    font-family: 'Showcard Gothic', sans-serif;
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.agences-corps-block a {
+    text-decoration: none;
+}
+
+        /**********  Partie télécharement des docs  **********/
+
+.fichiers {
+    padding: 1.5rem 0;
+    text-align: center;
+    background-color: rgb(141, 141, 141); 
+}
+
+.fichiers .agence-titre {
+    width: 98%;
+}
+
+.fichiers .agence-titre h2 {
+    color: rgb(31, 31, 31);
+    font-size: 1.75rem;
+}
+
+.fichiers .agence-titre p {
+    line-height: 1.4rem;
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+.telecharge {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+    /**********  Page Projet  **********/
+
+.accueil-projet {
+    background-image: url('../img/Projet.jpg');
+}
+
+.accueil-projet .accueil-text .accueil-text-haut h1 {
+    font-size: 5rem;
+}
+
+.container-projet h2 {
+    font-size: 2.5rem;
+}
+
+        /**********  Partie présentation GraphWe  **********/
+
+.graphwe {
+    margin: 2.5rem 0;
+}
+
+.graphwe-prez {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.graphwe-titre {
+    margin: 1.5rem 1rem;
+    font-size: 1.75rem;
+}
+
+.graphwe-prez img {
+    width: 50%;
+    transition: .3s;
+}
+
+.graphwe-prez img:hover {
+    transform: scale(1.025,1);
+}
+
+.graphwe-prez p {
+    line-height: 1.4rem;
+    width: 42%;
+}
+
+.projo {
+    text-align: center;
+}
+
+.objectif, 
+.avance {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.avance ul, 
+.objectif ul {
+    list-style: none;
+}
+
+        /**********  Partie Objectifs  **********/ 
+
+.container-projet {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem 0;
+}
+
+.projet .barre {
+    width: 120px;
+    height: 5px;
+    background: #343133;
+    margin: 1rem auto 1.5rem;
+}
+
+        /**********  Partie Avancement  **********/   
+
+.avance .barre, 
+.objectif .barre {
+    margin: 1rem auto 1.5rem;
+    width: 50%;
+    height: 4px;
+    background: #343133;
+    justify-content: center; 
+}
+
+.avancement {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.avancement h3 {
+    font-family: 'Showcard Gothic', sans-serif;
+    font-size: 1.75rem;
+    color: #343133;
+    margin: 1rem 0;
+}
+
+.avancement .barre {
+    width: 75%;
+    height: 4px;
+    background: #343133;
+    margin: 1rem auto 1.5rem;
+    justify-content: center; 
+}
+
+.avancement p {
+    line-height: 1.4rem;
+    margin: 1.5rem 0;
+}
+
+    /**********  Page Contact  **********/
+
+.accueil-contact {
+    background-image: url('../img/Contact.jpg');
+}
+
+.accueil-contact .accueil-text .accueil-text-haut h1 {
+    font-size: 4.5rem;
+}
+
+.pcontact, 
+.mentions {
+    padding: 3rem 0 3rem;
+    color: #343133; 
+}
+
+.container-contact, 
+.container-mentions {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem 0;
+}
+
+.contact-titre {
+    text-align: center;
+}
+
+.contact-titre h2 {
+    font-family: 'Showcard Gothic', sans-serif;
+    font-size: 3rem;
+    color: #343133;
+    margin: 1rem 0;
+}
+
+.contact-titre .barre {
+    width: 75%;
+    height: 4px;
+    background: #343133;
+    margin: 1rem auto 1.5rem;
+    justify-content: center; 
+}
+
+.bord-form {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #ececec;
+}
+
+.form {
+    width: 90%;
+}
+
+.contact-inform {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-inform-block {
+    width: 41%;
+}
+
+.contact-inform-block h2 {
+    font-family: 'Showcard Gothic', sans-serif;
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.contact-inform-block h3 {
+    font-family: 'Showcard Gothic', sans-serif;
+    font-size: 1.25rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.contact-inform-block p {
+    line-height: 1.4rem;
+    font-size: 1.25rem;
+}
+
+.contact-inform-block a {
+    color: #809739;
+}
+
+.contact-inform-block label, 
+.contact-inform-block .input, 
+.contact-inform-block textarea {
+    margin: 0.5rem 0.5rem;
+}
+
+.contact-inform-block .input {
+    width: 250px;
+    height: 25px;
+}
+
+.contact-inform-block textarea {
+    min-height: 50px;
+    max-width: 460px;
+    min-width: 250px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    /********* Page Mentions Légales *******/
+
+.accueil-mentions {
+    background-image: url('../img/Mentions.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+    background-position: center;
+}
+
+.accueil-mentions h1 {
+    font-size: 4.5rem;
+}
+
+    /**********  Responsive  **********/
+
+@media all and (max-width: 1150px) {
+
+    .accueil-text-haut h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
+    .menu2 {
+        width: 550px;
+    }
+
+    #publi4 {
+        display: none;
+    }
+
+    .publi-corps {
+        width: 33%;
+    }
+    
+            /********** Page Agence **********/
+
+    .accueil-agence .accueil-text .accueil-text-haut h1 {
+        font-size: 5rem;
+        margin-top: 2rem;
+    }
+
+    .perso {
+        margin: 0.55rem;
+    }
+
+    .popupDesc-corps p {
+        margin: 1rem;
+    }
+
+    .agences .entete-titre h2 {
+        font-size: 2rem;
+    }
+
+    .agences-corps-block {
+        width: 15%;
+    }
+
+    .agences-corps-block:hover {
+        width: 15.25%;
+    }
+
+            /********** Page Projet **********/
+
+    .accueil-projet .accueil-text .accueil-text-haut h1 {
+        font-size: 5rem;
+        margin-top: 2rem;
+    }
+
+    .graphwe-titre {
+        text-align: center;
+    }
+
+    .graphwe-prez {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .graphwe-prez p {
+        line-height: 1.3rem;
+        width: 75%;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .graphwe-prez img {
+        width: 75%;
+    }
+
+    .graphwe-prez img:hover {
+        width: 76%;
+    }
+
+        /********** Page Contact **********/
+
+    .accueil-contact .accueil-text .accueil-text-haut h1 {
+        font-size: 5rem;
+        margin-top: 2rem;
+    }
+
+}
+
+@media all and (max-width: 1080px) {
+
+        /********** Page Agence **********/
+    
+    .agence-titre h2 {
+        font-size: 2.5rem;
+    }
+
+    .popupDesc-corps img {
+        width: 38%;
+    }
+
+    .agences-corps-block h3 {
+        font-size: 1.25rem;
+    }
+
+    .agences-corps-block p {
+        line-height: 1.5rem;
+    } 
+}
+
+@media all and (max-width: 991px) {
+
+            /********** Menu Burger **********/
+
+    .accueil .toggle, 
+    .accueil-agence .toggle, 
+    .accueil-projet .toggle, 
+    .accueil-contact .toggle, 
+    .accueil-mentions .toggle {
+        display: block;
+        position: absolute;
+        top: 2.75rem;
+        right: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+        color: rgb(24, 24, 23);
+        text-shadow: 0em 0.01em 0.25em rgb(235, 238, 231) ;
+    }
+
+    .ouvrir {
+        display: block;
+    }
+
+    .fermer {
+        display: none;
+    }
+
+    .ouvert .ouvrir {
+        display: none;
+    }
+
+    .ouvert .fermer {
+        display: block;
+    }
+
+    .logo {
+        z-index : 20;
+    }
+
+    .menu, 
+    .menu2 {
+        background: rgb(43, 43, 43); 
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        color: rgb(230, 230, 230);
+        transform: translateX(-100%);
+        transition: transform .5s;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .ouvert .menu, 
+    .ouvert .menu2 {
+        transform: translateX(0);
+    }
+
+    .menu-lien {
+        color :rgb(230, 230, 230);
+    }
+
+    .menu-lien:hover {
+        transform: scale(1.008);
+        color: white;
+        animation: link 0.75s infinite ;
+    }
+    
+    #active { 
+        background-color: #d9f7a3;
+        border-radius: 8px;
+    }
+
+        /********** Page d'Accueil *********/
+
+    .image {
+        padding: 2rem;
+    }
+    
+    .apropos-corps-agence .text {
+        padding-left: 3.5rem;
+    }
+
+    .apropos-corps-projet .text {
+        padding-right: 3.5rem;
+    }
+
+    #publi3 {
+        display: none;
+    }
+
+    .publi-corps {
+        width: 50%;
+    }
+    
+    .box {
+        width: 260px;
+    }
+
+            /********** Page Agence **********/
+
+    .agences-corps-block h3 {
+        font-size: 1rem;
+    }
+
+    .perso {
+        margin: 0.16rem;
+    }
+
+    .popupDesc-corps img {
+        width: 40%;
+    }
+
+    .popup .popupDesc .popupDesc-corps .design img {
+        width: 24%;
+    }
+
+    .popupDesc-corps p {
+        margin: 0.25rem;
+        padding: 0rem 0.5rem;
+    }
+
+    .agences-corps-block p {
+        line-height: 1rem;
+    }
+
+}
+
+@media all and (max-width: 820px) {
+
+        /********** Page d'Accueil **********/
+
+    .accueil-text-haut h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .entete-slogan {
+        display: none;
+    }
+
+    .entete-titre {
+        width :100%;
+    }
+
+    .entete-titre h2 {
+        font-size: 2.5rem;
+    }
+
+    .apropos-corps-agence, 
+    .apropos-corps-projet {
+        flex-direction: column;
+    }
+    
+    .text {
+        width:75%;
+    }
+    
+    .apropos-corps-agence .text, 
+    .apropos-corps-projet .text {
+        padding: 1rem 0;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .image {
+        width: 75%;
+        padding: 0.5rem;
+    }
+    
+    .picture {
+        width: 100%;
+    }
+
+    .picture:hover {
+        transform: none;
+    }
+
+        /********** Page Agence **********/
+
+    .accueil-agence .accueil-text .accueil-text-haut h1 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+
+
+    .container-agence {
+        flex-direction: column;
+    }
+
+    .poles {
+        flex-direction: column;
+    }
+
+    .pole:hover, 
+    .pole2:hover, 
+    .pole3:hover {
+        background-color: white;
+        box-shadow: none;
+        background-size: 100%;
+    }
+
+    .perso {
+        margin: 0.75rem;
+    }
+
+    .perso img {
+        width: 200px;
+    }
+
+    .popupdesc-corps-perso {
+        width: 95%;
+    }
+
+    .popupDesc-corps p {
+        margin: 0rem;
+        padding: 0 0.25rem;
+    }
+
+    .agences-corps-block {
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .agences-corps-block:hover {
+        width: 100%;
+    }
+    
+    .agences-corps-block img {
+        width: 38%; 
+    }
+    
+    .agences-corps-block h3 {
+        font-size: 1.75rem;
+        margin: 1.5rem 0 1rem;
+    }
+
+    .telecharge {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fichier {
+        margin: 1rem;
+    }
+
+        /********** Page Projet **********/
+
+    .accueil-projet .accueil-text .accueil-text-haut h1 {
+        font-size: 4rem;
+        margin-top: 3.5rem;
+    }
+
+        /********** Page Contact **********/
+
+    .accueil-contact .accueil-text .accueil-text-haut h1 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+
+    .contact-titre h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media all and (max-width: 730px) {
+
+    /********** Page d'Accueil **********/
+
+    .apropos-corps-agence .text, 
+    .apropos-corps-projet .text {
+        padding: 1rem;
+    }
+    
+    .image {
+        width: 75%;
+        padding: 1rem;
+    }
+
+    .publi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .publi-corps {
+        width: 75%;
+    }
+    
+        /**********  Page Agence  **********/
+
+    .perso {
+        margin: 0.5rem;
+    }
+
+    .perso img {
+        width: 175px;
+    }
+
+    .popupDesc-corps {
+        width: 60%;
+    }
+
+    .popupDesc-corps p {
+        margin: 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .popupdesc-corps-perso {
+        display: none;
+    }
+
+    .fichiers .agence-titre {
+        width: 100%;
+    }
+
+        /**********  Page Projet  **********/
+
+    .avancement {
+        flex-direction: column;
+    }
+
+    .avancement-true {
+        margin: 1.5rem 0;
+    }
+
+        /********** Page Contact **********/
+
+    .contact-inform {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .contact-inform-block {
+        margin: 1.25rem 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    .contact-inform-block h2 {
+        font-size: 1.75rem;
+    }
+
+    .contact-form {
+        margin: 1rem 0;
+    }
+
+    .contact-inform-block .input {
+        height: 50px;
+    }
+
+    .contact-inform-block textarea {
+        max-width: 500px;
+        min-height: 100px;
+    }
+
+}
+
+@media all and (max-width: 600px) {
+
+    /********* Page Agence ********/
+
+    .perso {
+        margin: 0.5rem;
+    }
+
+    .perso img {
+        width: 150px;
+    }
+
+    .popupDesc-corps p {
+        margin: 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .popupDesc-corps {
+        width: 70%;
+    }
+}
+
+@media all and (max-width: 540px) {
+    
+        /********** Page d'Accueil **********/
+
+    .accueil-text-haut h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .entete-titre h2 {
+        font-size: 1.75rem;
+    }
+
+    .insta {
+        display: none;
+    } 
+
+    .box {
+        width: 150px;
+    }
+
+    .email:hover > .box, 
+    .box:focus {
+        width: 150px;
+    }
+
+        /********** Page Agence **********/
+
+    .accueil-agence .accueil-text .accueil-text-haut h1 {
+        font-size: 2.75rem;
+        line-height: 3.5rem;
+    }
+
+    .agence-titre p {
+        margin: 0 1rem;
+    }
+
+    .agence-titre h2 {
+        font-size: 1.75rem;
+    }
+
+    .ekip h3 {
+        font-size: 1rem;
+    }
+
+    .perso {
+        margin: 0.25rem;
+    }
+
+    .perso img {
+        width: 100px;
+    }
+
+    .popupDesc {
+        width: 90%;
+        height: 85%;
+    }
+
+    .popupDesc-corps p {
+        margin: 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .popupDesc-corps {
+        width: 80%;
+    }
+
+    .agences-corps-block h3 {
+        font-size: 1.5rem;
+        margin: 0.75rem 0 0.75rem;
+    }
+
+    .agences-corps-block img {
+        width: 50%;
+    }
+    
+        /********** Page Projet **********/
+
+    .accueil-projet .accueil-text .accueil-text-haut h1 {
+        font-size: 2.75rem;
+        line-height: 3.5rem;
+        margin-top: 2rem;
+    }
+    
+    .graphwe h2, 
+    .objectif h2, 
+    .avance h2 {
+        font-size: 2rem;
+    }
+
+    .avancement h3 {
+        font-size: 1.5rem;
+    }
+
+    .avancement-true {
+        margin: 1rem 0;
+    }
+
+            /********** Page Contact **********/
+
+    .accueil-contact .accueil-text .accueil-text-haut h1 {
+        font-size: 2.75rem;
+        line-height: 3.5rem;
+    }
+
+    .contact-titre h2 {
+        font-size: 1.75rem;
+    }
+
+    .contact-inform-block h2 {
+        font-size: 1.5rem;
+    }
+
+    /******** Page Mentions *********/
+
+    .mentions {
+        text-align: center;
+    }
+
+}
+
+@media all and (max-width: 330px) {
+
+        /********** Page d'Accueil **********/
+
+    .accueil-text-haut h1 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+
+    .entete-titre h2 {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 80%;
+        padding: 0.5rem;
+    }
+
+    .newsletter .email i {
+        display: none;
+    }
+
+        /********** Page Agence **********/
+
+    .accueil-agence .accueil-text .accueil-text-haut h1 {
+        font-size: 2.75rem;
+        line-height: 3.5rem;
+    }
+
+    .ekip h3 {
+        font-size: 1rem;
+    }
+
+    .perso {
+        margin: 0.25rem;
+    }
+
+    .perso img {
+        width: 80px;
+    }
+
+    .popupDesc {
+        width: 90%;
+        height: 85%;
+    }
+
+    .popupDesc-corps {
+        width: 100%;
+    }
+
+    .popupDesc-corps p {
+        margin: 0.125rem;
+        padding: 0 0.125rem;
+    }
+
+    .agences-corps-block h3 {
+        font-size: 1.5rem;
+        margin: 0rem;
+    }
+
+        /********** Page Projet **********/
+
+     .accueil-projet .accueil-text .accueil-text-haut h1 {
+        font-size: 2.75rem;
+        line-height: 3.5rem;
+        margin-top: 3.5rem;
+    }
+
+    .graphwe h2, 
+    .objectif h2, 
+    .avance h2 {
+        font-size: 1.5rem;
+    }
+
+    .avancement h3 {
+        font-size: 1.25rem;
+    }
+
+        /********** Page Contact **********/
+
+    .accueil-contact .accueil-text .accueil-text-haut h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .contact-titre h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-inform-block h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form {
+        margin: 1rem 0.75rem;
+    }
+
+    .contact-inform-block .input, 
+    .contact-inform-block textarea {
+        min-width: 175px;
+        width: 175px;
+    }
+
+}
+
+@keyframes bounce {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 9px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes link {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 3px;
+    }
+    100% {
+        bottom: 0;
+    }
+}

@@ -1,0 +1,425 @@
+    /********** Tu connais **********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.littlescreen, 
+#monBout {
+    display: none;
+}
+
+.sauver {
+    display: none;
+    color: #dadada;
+    font-size: 20px;
+    margin: 0.25rem 0rem;
+    font-family: 'Showcard Gothic', sans-serif;
+    letter-spacing: 2px;
+}
+
+.accueil {
+    background-image: url('../img/fond_etoiles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vh;
+    background-position: center;
+}
+
+.overlay {
+    background-image: url('../img/toiture.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 15vh;
+}
+
+.dessin, .main-home, .main-profil, .main-help {
+    background-image: url('../img/fond_body.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    text-align: center;
+}
+
+.menu {
+    position: absolute;
+    top: 11%;
+    left: 51.25%;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+    width: 540px;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    border: #454545 solid 2px;
+    padding: 0.4rem 1.25rem;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.menu li a {
+    color: #dadada;
+    font-size: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;       /********** + ou - gras **********/
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.menu li img {
+    width: 14px;
+}
+
+.menu li a:hover {
+    color: #fff;
+} 
+
+.btn {
+    color: #343133;
+    border-width: 1px;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background: rgb(250, 250, 250);
+    border-radius: 7px;
+    transition: 0.3s;
+    border: solid 1px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background: #1e1e1e; 
+    color: #dadada;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem 0;
+}
+
+body::-webkit-scrollbar {
+    width: 12.5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #dadada;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #343133; 
+    border-radius: 9px;
+    border: 1px solid #dadada  
+}
+
+    /******** Page d'accueil ********/
+
+.main-home {
+    color: #dadada;
+}
+
+.main-home h1 {
+    font-family: 'Showcard Gothic', sans-serif;
+    margin: 1rem;
+    font-size: 3rem;
+}
+
+.main-home-corps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem; 
+}
+
+    /******** Page de dessin ********/
+
+.popup {
+    display: none; 
+    position: fixed;    /********** Rester dans la place  **********/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 2px solid #666;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+            
+.popup-desc {
+    background-color: rgb(240, 240, 240);
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.popup-desc h1 {
+    font-size: 35px;
+    padding: 0.25rem;
+}
+
+.popup-desc p {
+    font-size: 19px;
+    padding: 0.5rem;
+}
+
+#fermer, #ferme {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 0rem 0.125rem;
+}
+
+.toolbar {
+    padding: 1rem 1rem;
+}
+
+.toolbar input[type=range] {
+    display: inline !important;
+    width: inherit !important;
+}
+
+#canvas {
+    background: #fff;
+    border: 5px solid #111111f1;
+    cursor: url("../img/crayon.png"), auto;
+}
+
+.enbala {
+    background-image: url('../img/header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 15vh;
+    text-align: center;
+}
+
+    /********* Page Galerie ********/
+
+.dessins {
+    padding-top: 2rem;
+}
+
+.dessins h1 {
+    font-family: 'Showcard Gothic', sans-serif;
+    color: #dadada;
+    font-size: 2rem;
+    padding: 0.5rem 0 1rem;
+    letter-spacing: 2px;
+}
+
+    /******* Page profil ********/
+
+.box {
+    width: 45%;
+    padding: 40px;
+    background: #1e1e1e;
+    text-align: center;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    padding-top: 4rem;
+    color: #dadada;
+    margin: 0 auto;
+}
+
+.box h1 {
+    font-family: 'Showcard Gothic', sans-serif;
+    color: #dadada;
+    font-size: 2rem;
+    padding: 0.5rem 0 1rem;
+    letter-spacing: 2px;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    text-align: center;
+    border: 2px solid #adadad;
+    padding: 14px 10px;
+    width: 300px;
+    border-radius: 12px;
+    color: #dadada;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 325px;
+    border: 2px solid whitesmoke;
+}
+
+.box a {
+    color: #71f7f2;
+}
+
+    /*********** Page Aide *********/
+
+.aide-section {
+    min-height: 100vh;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    color: #dadada;
+    overflow: hidden;
+}
+
+.aide-section h1 {
+    font-size:40px;
+    margin: 0.25rem 0rem;
+    font-family: 'Showcard Gothic', sans-serif;
+    letter-spacing: 2px;
+}
+
+.aide-section svg {
+    color: #dadada;
+}
+
+.aide-section .faq {
+    max-width: 700px;
+    margin-top:2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #dadada;
+    cursor: pointer;
+}
+
+.aide-section .question {
+    color: #dadada;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aide-section .question h3 {
+    color: #dadada;
+    font-size: 20px;
+    font-family: 'Showcard Gothic', sans-serif;
+    letter-spacing: 2px;
+}
+
+.aide-section .answer {
+    color: #dadada;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.aide-section .answer p {
+    color: #dadada;
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.aide-section .faq.active .answer {
+    max-height: 300px;
+}
+
+    /********** Responsive  **********/
+
+@media all and (max-width: 991px) {
+
+        /******** Page d'accueil *********/
+
+    .main-home-corps {
+        width: 50%;
+        margin: 0  auto;
+    }
+
+    .main-home h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media all and (max-width: 820px) {
+
+    /********* Page Profil *********/
+
+    .box input[type="text"], .box input[type="password"] {
+        width: 275px;
+    }
+}
+
+@media all and (max-width: 780px){
+
+    .bigscreen, #monBouton {
+        display: none;
+    }
+    
+    .littlescreen, #monBout {
+        display: block;
+    }
+}
+
+@media all and (max-width: 730px) {
+    
+    /********* Page Profil *********/
+    
+    .box input[type="text"], .box input[type="password"] {
+        width: 200px;
+    }
+}
+
+@media all and (max-width: 600px) {
+
+    .menu {
+        width: 450px;
+    }
+    
+    /********* Page Profil *********/
+    
+    .box h1 {
+        font-size: 1.75rem;
+    }
+
+    .box input[type="text"], .box input[type="password"] {
+        width: 150px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    
+    /********* Page Profil *********/
+
+    .box h1 {
+        font-size: 1.25rem;
+        padding: 0.5rem 0 1rem;
+        letter-spacing: 1px;
+    }
+
+    .box input[type="text"], .box input[type="password"] {
+        width: 125px;
+    }
+
+    .btn {
+        padding: 0.25rem 0.5rem;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+    }
+}
+
